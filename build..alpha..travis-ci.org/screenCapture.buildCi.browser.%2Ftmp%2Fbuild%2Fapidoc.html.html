@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/vuejs/vue-loader"
-
-    >vue-loader (v11.3.4)</a>
+    <a href="https://github.com/vuejs/vue-loader">vue-loader (v11.3.4)</a>
 </h1>
 <h4>Vue single-file component loader for Webpack</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.vue-loader">module vue-loader</a><ol>
 
@@ -87,8 +80,8 @@
     <ul>
     <li>description and source-code<pre class="apidocCodePre">vue-loader = function (content) {
   this.cacheable()
-  var isServer = this.target === &#x27;node&#x27;
-  var isProduction = this.minimize || process.env.NODE_ENV === &#x27;production&#x27;
+  var isServer = this.target === 'node'
+  var isProduction = this.minimize || process.env.NODE_ENV === 'production'
 
   var loaderContext = this
   var query = loaderUtils.getOptions(this) || {}
@@ -98,36 +91,36 @@
   var filePath = this.resourcePath
   var fileName = path.basename(filePath)
 
-  var context = (this._compiler &#x26;&#x26; this._compiler.context) || this.options.context || process.cwd()
-  var moduleId = &#x27;data-v-&#x27; + genId(filePath, context, options.hashKey)
+  var context = (this._compiler &amp;&amp; this._compiler.context) || this.options.context || process.cwd()
+  var moduleId = 'data-v-' + genId(filePath, context, options.hashKey)
 
-  var cssLoaderOptions = &#x27;&#x27;
-  if (!isProduction &#x26;&#x26; this.sourceMap &#x26;&#x26; options.cssSourceMap !== false) {
-    cssLoaderOptions += &#x27;?sourceMap&#x27;
+  var cssLoaderOptions = ''
+  if (!isProduction &amp;&amp; this.sourceMap &amp;&amp; options.cssSourceMap !== false) {
+    cssLoaderOptions += '?sourceMap'
   }
   if (isProduction) {
-    cssLoaderOptions += (cssLoaderOptions ? &#x27;&#x26;&#x27; : &#x27;?&#x27;) + &#x27;minimize&#x27;
+    cssLoaderOptions += (cssLoaderOptions ? '&amp;' : '?') + 'minimize'
   }
 
-  var bubleOptions = hasBuble &#x26;&#x26; options.buble
-    ? &#x27;?&#x27; + JSON.stringify(options.buble)
-    : &#x27;&#x27;
+  var bubleOptions = hasBuble &amp;&amp; options.buble
+    ? '?' + JSON.stringify(options.buble)
+    : ''
 
-  var templateCompilerOptions = &#x27;?&#x27; + JSON.stringify({
+  var templateCompilerOptions = '?' + JSON.stringify({
     id: moduleId,
     transformToRequire: options.transformToRequire,
     preserveWhitespace: options.preserveWhitespace,
     buble: options.buble,
-    // only pass compilerModules if it&#x27;s a path string
-    compilerModules: typeof options.compilerModules === &#x27;string&#x27;
+    // only pass compilerModules if it's a path string
+    compilerModules: typeof options.compilerModules === 'string'
       ? options.compilerModules
       : undefined
   })
 
   var defaultLoaders = {
     html: templateCompilerPath + templateCompilerOptions,
-    css: styleLoaderPath + &#x27;!&#x27; + &#x27;css-loader&#x27; + cssLoaderOptions,
-    js: hasBuble ? (&#x27;buble-loader&#x27; + bubleOptions) : hasBabel ? &#x27;babel-loader&#x27; : &#x27;&#x27;
+    css: styleLoaderPath + '!' + 'css-loader' + cssLoaderOptions,
+    js: hasBuble ? ('buble-loader' + bubleOptions) : hasBabel ? 'babel-loader' : ''
   }
 
   // check if there are custom loaders specified via
@@ -137,15 +130,15 @@
   var postLoaders = options.postLoaders || {}
 
   function getRequire (type, part, index, scoped) {
-    return &#x27;require(&#x27; +
+    return 'require(' +
       getRequireString(type, part, index, scoped) +
-    &#x27;)&#x27;
+    ')'
   }
 
   function getRequireString (type, part, index, scoped) {
     return loaderUtils.stringifyRequest(loaderContext,
       // disable all configuration loaders
-      &#x27;!!&#x27; +
+      '!!' +
       // get loader string for pre-processors
       getLoaderString(type, part, index, scoped) +
       // select the corresponding part from the vue file
@@ -156,14 +149,14 @@
   }
 
   function getRequireForImport (type, impt, scoped) {
-    return &#x27;require(&#x27; +
+    return 'require(' +
       getRequireForImportString(type, impt, scoped) +
-    &#x27;)&#x27;
+    ')'
   }
 
   function getRequireForImportString (type, impt, scoped) {
     return loaderUtils.stringifyRequest(loaderContext,
-      &#x27;!!&#x27; +
+      '!!' +
       getLoaderString(type, impt, -1, scoped) +
       impt.src
     )
@@ -177,21 +170,21 @@
       importLoaders: true
     }
     var OPTIONS = {
-      localIdentName: &#x27;[hash:base64]&#x27;
+      localIdentName: '[hash:base64]'
     }
     return loader.replace(/((?:^|!)css(?:-loader)?)(\?[^!]*)?/, function (m, $1, $2) {
       // $1: !css-loader
       // $2: ?a=b
-      var query = loaderUtils.parseQuery($2 || &#x27;?&#x27;)
+      var query = loaderUtils.parseQuery($2 || '?')
       Object.assign(query, OPTIONS, option, DEFAULT_OPTIONS)
       if (index !== -1) {
         // Note:
         //   Class name is generated according to its filename.
-        //   Different &#x3c;style&#x3e; tags in the same .vue file may generate same names.
+        //   Different &lt;style&gt; tags in the same .vue file may generate same names.
         //   Append `_[index]` to class name to avoid this.
-        query.localIdentName += &#x27;_&#x27; + index
+        query.localIdentName += '_' + index
       }
-      return $1 + &#x27;?&#x27; + JSON.stringify(query)
+      return $1 + '?' + JSON.stringify(query)
     })
   }
 
@@ -199,13 +192,13 @@
     var noSrcAttrs = Object.assign({}, attrs)
     delete noSrcAttrs.src
     var qs = querystring.stringify(noSrcAttrs)
-    return qs ? &#x27;?&#x27; + qs : qs
+    return qs ? '?' + qs : qs
   }
 
   // stringify an Array of loader objects
   function stringifyLoaders (loaders) {
     return loaders.map(function (obj) {
-      return obj &#x26;&#x26; typeof obj === &#x27;object&#x27; &#x26;&#x26; typeof obj.loader === &#x27;strin ...</pre></li>
+      return obj &amp;&amp; typeof obj === 'object' &amp;&amp; typeof obj.loader === 'strin ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -218,3 +211,4 @@
     ]
 </div>
 </div>
+</body></html>
