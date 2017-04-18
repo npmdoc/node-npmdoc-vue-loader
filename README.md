@@ -1,9 +1,14 @@
-# api documentation for  [vue-loader (v11.3.4)](https://github.com/vuejs/vue-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-loader)
+# npmdoc-vue-loader
+
+#### api documentation for  [vue-loader (v11.3.4)](https://github.com/vuejs/vue-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-loader)
+
 #### Vue single-file component loader for Webpack
 
-[![NPM](https://nodei.co/npm/vue-loader.png?downloads=true)](https://www.npmjs.com/package/vue-loader)
+[![NPM](https://nodei.co/npm/vue-loader.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vue-loader)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-vue-loader/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-vue-loader_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-vue-loader/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-vue-loader/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-vue-loader/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-vue-loader/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-vue-loader/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-vue-loader/build/screenCapture.npmPackageListing.svg)
 
@@ -93,8 +98,7 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "yyx990803",
-            "email": "yyx990803@gmail.com"
+            "name": "yyx990803"
         }
     ],
     "name": "vue-loader",
@@ -103,7 +107,6 @@
         "css-loader": "*",
         "vue-template-compiler": "^2.0.0"
     },
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/vuejs/vue-loader.git"
@@ -117,16 +120,6 @@
     "version": "11.3.4"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module vue-loader](#apidoc.module.vue-loader)
-
-
-
-# <a name="apidoc.module.vue-loader"></a>[module vue-loader](#apidoc.module.vue-loader)
 
 
 
