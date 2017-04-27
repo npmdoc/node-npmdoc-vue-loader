@@ -1,6 +1,6 @@
 # npmdoc-vue-loader
 
-#### api documentation for  [vue-loader (v11.3.4)](https://github.com/vuejs/vue-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-loader)
+#### basic api documentation for  [vue-loader (v12.0.2)](https://github.com/vuejs/vue-loader)  [![npm package](https://img.shields.io/npm/v/npmdoc-vue-loader.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-vue-loader) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-vue-loader.svg)](https://travis-ci.org/npmdoc/node-npmdoc-vue-loader)
 
 #### Vue single-file component loader for Webpack
 
@@ -36,9 +36,10 @@
         "postcss": "^5.0.21",
         "postcss-load-config": "^1.1.0",
         "postcss-selector-parser": "^2.0.0",
+        "resolve": "^1.3.3",
         "source-map": "^0.5.6",
-        "vue-hot-reload-api": "^2.0.11",
-        "vue-style-loader": "^2.0.0",
+        "vue-hot-reload-api": "^2.1.0",
+        "vue-style-loader": "^3.0.0",
         "vue-template-es2015-compiler": "^1.2.2"
     },
     "description": "Vue single-file component loader for Webpack",
@@ -73,21 +74,21 @@
         "stylus-loader": "^2.0.0",
         "sugarss": "^0.2.0",
         "url-loader": "^0.5.7",
-        "vue": "^2.1.0",
-        "vue-server-renderer": "^2.1.10",
-        "vue-template-compiler": "^2.1.0",
+        "vue": "^2.3.0-beta.1",
+        "vue-server-renderer": "^2.3.0-beta.1",
+        "vue-template-compiler": "^2.3.0-beta.1",
         "webpack": "^2.2.0"
     },
     "directories": {},
     "dist": {
-        "shasum": "65e10a44ce092d906e14bbc72981dec99eb090d2",
-        "tarball": "https://registry.npmjs.org/vue-loader/-/vue-loader-11.3.4.tgz"
+        "shasum": "f539036b1e0e9516b474a8fd1b5f533145248406",
+        "tarball": "https://registry.npmjs.org/vue-loader/-/vue-loader-12.0.2.tgz"
     },
     "files": [
         "index.js",
         "lib"
     ],
-    "gitHead": "5af00e58bb58329ac353c0e4048a62a33f8dac15",
+    "gitHead": "08491c9e3802dab47f07a67e20dc3ef87e48ecf8",
     "homepage": "https://github.com/vuejs/vue-loader",
     "keywords": [
         "vue",
@@ -117,7 +118,8 @@
         "lint": "eslint lib",
         "test": "eslint lib && mocha --slow 5000 --timeout 10000"
     },
-    "version": "11.3.4"
+    "version": "12.0.2",
+    "bin": {}
 }
 ```
 
