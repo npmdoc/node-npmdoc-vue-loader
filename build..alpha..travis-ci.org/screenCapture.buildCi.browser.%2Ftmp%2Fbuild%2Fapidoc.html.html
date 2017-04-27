@@ -47,7 +47,7 @@
 }
 </style>
 <h1>api documentation for
-    <a href="https://github.com/vuejs/vue-loader">vue-loader (v11.3.4)</a>
+    <a href="https://github.com/vuejs/vue-loader">vue-loader (v12.0.2)</a>
 </h1>
 <h4>Vue single-file component loader for Webpack</h4>
 <div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
@@ -59,6 +59,96 @@
             <a class="apidocElementLiA" href="#apidoc.element.vue-loader.vue-loader">
             function <span class="apidocSignatureSpan"></span>vue-loader
             <span class="apidocSignatureSpan">(content)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.scope_id">
+            function <span class="apidocSignatureSpan">vue-loader.</span>scope_id
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.trim">
+            function <span class="apidocSignatureSpan">vue-loader.</span>trim
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">vue-loader.</span>normalize</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vue-loader.normalize">module vue-loader.normalize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.normalize.dep">
+            function <span class="apidocSignatureSpan">vue-loader.normalize.</span>dep
+            <span class="apidocSignatureSpan">(dep)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.normalize.lib">
+            function <span class="apidocSignatureSpan">vue-loader.normalize.</span>lib
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vue-loader.scope_id">module vue-loader.scope_id</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.scope_id.scope_id">
+            function <span class="apidocSignatureSpan">vue-loader.</span>scope_id
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.scope_id.process">
+            function <span class="apidocSignatureSpan">vue-loader.scope_id.</span>process
+            <span class="apidocSignatureSpan">(root, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.vue-loader.trim">module vue-loader.trim</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.trim.trim">
+            function <span class="apidocSignatureSpan">vue-loader.</span>trim
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.vue-loader.trim.process">
+            function <span class="apidocSignatureSpan">vue-loader.trim.</span>process
+            <span class="apidocSignatureSpan">(root, opts)</span>
             </a>
 
         </li>
@@ -119,7 +209,9 @@
 
   var defaultLoaders = {
     html: templateCompilerPath + templateCompilerOptions,
-    css: styleLoaderPath + '!' + 'css-loader' + cssLoaderOptions,
+    css: options.extractCSS
+      ? getCSSExtractLoader()
+      : styleLoaderPath + '!' + 'css-loader' + cssLoaderOptions,
     js: hasBuble ? ('buble-loader' + bubleOptions) : hasBabel ? 'babel-loader' : ''
   }
 
@@ -198,8 +290,229 @@
   // stringify an Array of loader objects
   function stringifyLoaders (loaders) {
     return loaders.map(function (obj) {
-      return obj &amp;&amp; typeof obj === 'object' &amp;&amp; typeof obj.loader === 'strin ...</pre></li>
+      return obj &amp; ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.scope_id" id="apidoc.element.vue-loader.scope_id">
+        function <span class="apidocSignatureSpan">vue-loader.</span>scope_id
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.trim" id="apidoc.element.vue-loader.trim">
+        function <span class="apidocSignatureSpan">vue-loader.</span>trim
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vue-loader.normalize" id="apidoc.module.vue-loader.normalize">module vue-loader.normalize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.normalize.dep" id="apidoc.element.vue-loader.normalize.dep">
+        function <span class="apidocSignatureSpan">vue-loader.normalize.</span>dep
+        <span class="apidocSignatureSpan">(dep)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dep = function (dep) {
+  if (IS_TEST) {
+    return dep
+  } else if (fs.existsSync(path.resolve(__dirname, '../../node_modules', dep))) {
+    // npm 2 or npm linked
+    return 'vue-loader/node_modules/' + dep
+  } else {
+    // npm 3
+    return dep
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var selectorPath = normalize.lib('selector')
+var styleCompilerPath = normalize.lib('style-compiler/index')
+var templateCompilerPath = normalize.lib('template-compiler/index')
+var templatePreprocessorPath = normalize.lib('template-compiler/preprocessor')
+var componentNormalizerPath = normalize.lib('component-normalizer')
+
+// dep loaders
+var styleLoaderPath = normalize.<span class="apidocCodeKeywordSpan">dep</span>('vue-style-loader')
+var hotReloadAPIPath = normalize.dep('vue-hot-reload-api')
+
+// check whether default js loader exists
+var hasBabel = !!tryRequire('babel-loader')
+var hasBuble = !!tryRequire('buble-loader')
+
+var rewriterInjectRE = /\b(css(?:-loader)?(?:\?[^!]+)?)(?:!|$)/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.normalize.lib" id="apidoc.element.vue-loader.normalize.lib">
+        function <span class="apidocSignatureSpan">vue-loader.normalize.</span>lib
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lib = function (file) {
+  return path.resolve(__dirname, '../', file)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var genId = require('./utils/gen-id')
+var querystring = require('querystring')
+var loaderUtils = require('loader-utils')
+var normalize = require('./utils/normalize')
+var tryRequire = require('./utils/try-require')
+
+// internal lib loaders
+var selectorPath = normalize.<span class="apidocCodeKeywordSpan">lib</span>('selector')
+var styleCompilerPath = normalize.lib('style-compiler/index')
+var templateCompilerPath = normalize.lib('template-compiler/index')
+var templatePreprocessorPath = normalize.lib('template-compiler/preprocessor')
+var componentNormalizerPath = normalize.lib('component-normalizer')
+
+// dep loaders
+var styleLoaderPath = normalize.dep('vue-style-loader')
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vue-loader.scope_id" id="apidoc.module.vue-loader.scope_id">module vue-loader.scope_id</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.scope_id.scope_id" id="apidoc.element.vue-loader.scope_id.scope_id">
+        function <span class="apidocSignatureSpan">vue-loader.</span>scope_id
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.scope_id.process" id="apidoc.element.vue-loader.scope_id.process">
+        function <span class="apidocSignatureSpan">vue-loader.scope_id.</span>process
+        <span class="apidocSignatureSpan">(root, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (root, opts) {
+  return postcss([creator(opts)]).process(root, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    inline: false,
+    annotation: false,
+    prev: map
+  }
+}
+
+return postcss(plugins)
+  .<span class="apidocCodeKeywordSpan">process</span>(css, options)
+  .then(result =&gt; {
+    if (result.messages) {
+      result.messages.forEach(m =&gt; {
+        if (m.type === 'dependency') {
+          this.addDependency(m.file)
+        }
+      })
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.vue-loader.trim" id="apidoc.module.vue-loader.trim">module vue-loader.trim</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.trim.trim" id="apidoc.element.vue-loader.trim.trim">
+        function <span class="apidocSignatureSpan">vue-loader.</span>trim
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function creator() {
+  var transformer = initializer.apply(undefined, arguments);
+  transformer.postcssPlugin = name;
+  transformer.postcssVersion = new _processor2.default().version;
+  return transformer;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.vue-loader.trim.process" id="apidoc.element.vue-loader.trim.process">
+        function <span class="apidocSignatureSpan">vue-loader.trim.</span>process
+        <span class="apidocSignatureSpan">(root, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">process = function (root, opts) {
+  return postcss([creator(opts)]).process(root, opts);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    inline: false,
+    annotation: false,
+    prev: map
+  }
+}
+
+return postcss(plugins)
+  .<span class="apidocCodeKeywordSpan">process</span>(css, options)
+  .then(result =&gt; {
+    if (result.messages) {
+      result.messages.forEach(m =&gt; {
+        if (m.type === 'dependency') {
+          this.addDependency(m.file)
+        }
+      })
+...</pre></li>
     </ul>
 
 
